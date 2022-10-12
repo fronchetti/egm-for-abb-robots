@@ -5,4 +5,4 @@
 EGM is a feature available in RobotWare that provides external devices the ability to control ABB robots. In this approach, the communication is done through Google Protocol Buffers using UDP sockets.
 
 ## When?
-In our laboratory, we implement different applications in mixed reality that are directly connected to ABB robots. Such applications are made in Unity using the Microsoft Mixed Reality Toolkit (MRTK). One of the current limitations of Unity is that it does not accept external kits, such as the ones provided by ABB. For this reason, we use EGM to create a direct communication between our mixed reality devices and the robots. EGM is simple, efficient and easy to understand.
+In our laboratory, we implement different applications in mixed reality that are directly connected to ABB robots. Such applications are made in Unity using the Microsoft Mixed Reality Toolkit (MRTK). One of the current limitations of Unity is that it does not accept external kits, such as the ones provided by ABB. For this reason, we use EGM to create a direct communication between our mixed reality devices and the robots. EGM is simple, efficient and works perfectly with Unity.
