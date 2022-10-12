@@ -2,7 +2,7 @@
 :gear: Using Externally Guided Motion (EGM) to control ABB robots. 
 
 ## What?
-EGM is a feature available in RobotWare that provides external devices the ability to control ABB robots. In this approach, the communication is done through Google Protocol Buffers using UDP sockets.
+EGM is a feature available in ABB RobotWare systems that provides external devices the ability to control ABB robots. In this approach, the communication is done through Google Protocol Buffers using UDP sockets.
 
 For more information, visit the [Application Manual](https://library.e.abb.com/public/f05090fae99a4d0ba2ee332e50865791/3HAC073318%20AM%20Externally%20Guided%20Motion%20RW7-en.pdf) provided by ABB.
 
