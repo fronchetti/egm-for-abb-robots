@@ -13,4 +13,4 @@ In our laboratory, we implement applications in mixed reality that are directly 
 
 # Common questions
 - **Does it work with virtual controllers?**
-The answer is yes, but there are limitations. As far as I am aware of, it is not possible to run both virtual controlller and your application on a same machine. The reason is pretty simple, your computer would send and receive messages from both the client and the server at the same time, creating communication errors (e.g., invalid message error on robot controller). 
+The answer is yes, but there are limitations. As far as I am aware of, it is not possible to run both virtual controlller and your application on a same machine. The reason is pretty simple, your computer would send and receive messages from both the EGM client and the server at the same time, creating issues in the communication process (e.g., errors on robot controller saying that the inbound message is invalid). 
