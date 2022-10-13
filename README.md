@@ -12,5 +12,5 @@ For a more detailed explanation, visit the [Application Manual](https://library.
 In our laboratory, we implement applications in mixed reality that are directly connected to ABB robots. Such applications are made in Unity using the Microsoft Mixed Reality Toolkit. One of the current limitations of Unity is that it does not accept external development kits, such as the ones provided by ABB. For this reason, we tend to use EGM to create the communication between our mixed reality devices and the ABB robots. EGM is simple, efficient and works perfectly with Unity.
 
 # Common questions
-- Does it work with virtual controllers?
+- **Does it work with virtual controllers?**
 The answer is yes, but there are limitations. As far as I am aware of, it is not possible to run both virtual controlller and your application on a same machine. The reason is pretty simple, your computer would send and receive messages from both the client and the server at the same time, creating communication errors (e.g., invalid message error on robot controller). 
