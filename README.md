@@ -4,7 +4,7 @@
 _Last update: 10/12/2022_
 
 ## What?
-EGM is a feature available in RobotWare 6 and 7 that provides external devices the ability to interact with ABB robots through a network. In this approach, the information is encoded using Google Protocol Buffers and trasported through UDP sockets. EGM is a great option for those who aim to manipulate a robot from an external device.
+EGM is a feature available in RobotWare 6 and 7 that provides external devices the ability to interact with ABB robots through a network. In this approach, the information is encoded using Google Protocol Buffers and trasported through UDP sockets. EGM is a great option for those who need to manipulate an ABB robot from an external device.
 
 For a more detailed explanation, visit the [Application Manual](https://library.e.abb.com/public/f05090fae99a4d0ba2ee332e50865791/3HAC073318%20AM%20Externally%20Guided%20Motion%20RW7-en.pdf) provided by ABB.
 
