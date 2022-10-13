@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "Y0AbS83fURkpUMKgiNcDzrOV+VL9XcFZ44yi7g1rtWdLx3/4ue0GgPG1nSXcKyoCfAWPK0rr6UF7BpAeRffuTw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\fronchettl\\Documents\\GitHub\\WPFProject\\WPFProject.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\fronchettl\\.nuget\\packages\\google.protobuf\\3.21.7\\google.protobuf.3.21.7.nupkg.sha512",
+    "C:\\Users\\fronchettl\\.nuget\\packages\\google.protobuf.tools\\3.21.7\\google.protobuf.tools.3.21.7.nupkg.sha512",
+    "C:\\Users\\fronchettl\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
+    "C:\\Users\\fronchettl\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.2\\system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512",
+    "C:\\Users\\fronchettl\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.23\\microsoft.netcore.app.host.win-x64.3.1.23.nupkg.sha512"
+  ],
+  "logs": []
+}
