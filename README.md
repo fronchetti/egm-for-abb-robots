@@ -20,8 +20,8 @@ For those looking for options that are not implemented in C#, please refer to li
 - [WPF Application](https://github.com/vcuse/egm-for-abb-robots/tree/main/WPF-Example): Example of a desktop application implemented in C# (.NET) to move an ABB robot to a specific location (x, y, z) and rotation (rx, ry, rz) using _EGMActPose_ and _EGMRunPose_.
 - [Unity Application](https://github.com/vcuse/egm-for-abb-robots/tree/main/WPF-Example): Example of an Unity application implemented in C# to move an ABB robot to a specific joint configuration using _EGMActJoint_ and _EGMRunJoint_.
 - Examples of RAPID code to turn your controller into an EGM client: 
-    - [Robot movement based on _EGMActPose_ and _EGMRunPose_](https://github.com/vcuse/egm-for-abb-robots/blob/main/EGMPoseCommunication.modx)
-    - [Robot movement based on _EGMActJoint_ and _EGMRunJoint_](https://github.com/vcuse/egm-for-abb-robots/blob/main/EGMJointCommunication.modx)
+    - [Robot movement based on _EGMActPose_ and _EGMRunPose_](https://github.com/vcuse/egm-for-abb-robots/blob/main/EGMPoseCommunication.modx) (Position)
+    - [Robot movement based on _EGMActJoint_ and _EGMRunJoint_](https://github.com/vcuse/egm-for-abb-robots/blob/main/EGMJointCommunication.modx) (Joint Values)
 
 
 # Common questions
