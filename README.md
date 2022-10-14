@@ -14,7 +14,8 @@ In our laboratory, we implement applications in mixed reality that are used to m
 For those looking for options that are not implemented in C#, please refer to libraries such as [abb_libegm](https://www.rosin-project.eu/tool/abb-libegm#:~:text=abb_libegm%20is%20a%20C%2B%2B%20communication,well%20as%20providing%20user%20APIs.) (in C++) and [abbegm](https://docs.rs/abbegm/latest/abbegm/) (in Rust).
 
 ## What is available in this repository?
-
+- [WPF Application](https://github.com/vcuse/egm-for-abb-robots/tree/main/WPF-Example): Example of a desktop application implemented in C# (.NET) to move an ABB robot to a specific location (x, y, z) and rotation (rx, ry, rz) using _EGMActPose_ and _EGMRunPose_.
+- [Tutorial on how to prepare your ABB controller to run EGM](https://github.com/vcuse/egm-for-abb-robots/blob/main/EGM-Preparing-your-robot.pdf)
 
 
 # Common questions
