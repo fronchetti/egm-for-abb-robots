@@ -1,15 +1,16 @@
-# Example of desktop application to control ABB robots
+#  Using Windows Presentation Foundation (WPF) to control ABB robots
 
 ## Requirements
 To make this application work you will need:
 - Visual Studio
 - .NET Core 3.1
-- An ABB robot running EGM to act as your client
+- Windows acting as your operating system
+- An ABB robot running EGM to serve as your client
 
-## How to run the application?
-Open the project using Visual Studio by clicking on the [WPFProject.sln](https://github.com/vcuse/egm-for-abb-robots/blob/main/WPF-Example/WPFProject.sln) executable. Click on the play button on Visual Studio to run the application.
+## How to run this application?
+Open this project using Visual Studio by clicking on the [WPFProject.sln](https://github.com/vcuse/egm-for-abb-robots/blob/main/WPF-Example/WPFProject.sln) executable. Click on the play button on Visual Studio to execute the project. A desktop application should open on your computer.
 
 ## What files in this project are related to EGM?
-There are only two files in this project that should care about if you are learning about EGM:
-- [MainWindow.xaml.cs](https://github.com/vcuse/egm-for-abb-robots/blob/main/WPF-Example/MainWindow.xaml.cs) This desktop application has only one window, and is in the C# file associated with this window that we run the EGM communication between our computer and the robot. This is the most important file as it contains the entire implementation made by for this project.
+There are only two files in this project that you should care about if you want to learn more about EGM:
+- [MainWindow.xaml.cs](https://github.com/vcuse/egm-for-abb-robots/blob/main/WPF-Example/MainWindow.xaml.cs) This desktop application has only one interface, and is in the C# file associated with this interface (MainWindow.xaml) that we run the EGM communication between our computer and the ABB robot. This is the most important file as it contains the entire implementation made for this project.
 
