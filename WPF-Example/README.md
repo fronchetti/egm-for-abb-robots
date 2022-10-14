@@ -8,7 +8,7 @@ To make this application work you will need:
 - An ABB robot running EGM to serve as your client
 
 ## How to run this application?
-Open this project using Visual Studio by clicking on the [WPFProject.sln](https://github.com/vcuse/egm-for-abb-robots/blob/main/WPF-Example/WPFProject.sln) executable. Click on the play button on Visual Studio to execute the project. A desktop application should open on your computer.
+Open this project using Visual Studio by clicking on the [WPFProject.sln](https://github.com/vcuse/egm-for-abb-robots/blob/main/WPF-Example/WPFProject.sln) executable. Click on the play button on Visual Studio to execute the project. A desktop application will be opened on your computer.
 
 ## What files in this project are related to EGM?
 There are only two files in this project that you should care about if you want to learn more about EGM:
