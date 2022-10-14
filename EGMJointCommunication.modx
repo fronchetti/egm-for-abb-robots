@@ -43,7 +43,7 @@ MODULE EGMCommunication
             ! the controller communication tab. In this example, the UdpUc device name is PC,
             ! moving the robot mechanical unit ROB_1.
             IF egm_state <= EGM_STATE_CONNECTED THEN
-                EGMSetupUC ROB_1, egm_id, "default", "PC", \Pose; 
+                EGMSetupUC ROB_1, egm_id, "default", "PC", \Joint; 
             ENDIF
             
             ! De-serializes the message sent by the external device.
