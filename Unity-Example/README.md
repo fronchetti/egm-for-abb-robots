@@ -10,7 +10,7 @@ In order to run this project, you need:
 - To allow Unity in your operating system firewall to receive and send messages 
 - An ABB robot running EGM to serve as your EGM client
 
-How to run this application?
+# How to run this application?
 Import this project folder using Unity Hub and open the project using Unity 2020.3.14f1. Click on the play button available on the Unity interface to run the program. Use the sliders to manipulate the robot joints.
 
 If your robot is not running EGM already, please refer to our [tutorial](https://github.com/vcuse/egm-for-abb-robots/blob/main/EGM-Preparing-your-robot.pdf) on how to setup your ABB robot for EGM communication.
