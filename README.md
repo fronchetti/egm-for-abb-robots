@@ -30,6 +30,8 @@ For those looking for options that are not implemented in C#, please refer to li
 - **Does it work with virtual controllers?**
 The answer is yes, but there are limitations. As far as I am aware of, it is not possible to run both virtual controlller and your application on a same machine. The reason is pretty simple, your computer would send and receive messages from both the EGM client and the server at the same time, creating issues in the communication process (e.g., errors from virtual controller saying that the inbound message is invalid). 
 
+You also have to make your virtual controller public on the network if you want to control it with an external device. To make it accessible, add a new line containing the external IP address (e.g., <host ip="192.168.0.36"/>) in the C:\Users\your_username\AppData\Roaming\ABB Industrial IT\Robotics IT\VCConf.xml file on your computer. 
+
 # Need help?
 Don't hesitate to contact me:
 - Felipe Fronchetti - fronchettl@vcu.edu.
