@@ -1,0 +1,88 @@
+MODULE EGMCommunication
+    ! Author: Felipe Fronchetti
+    ! Email: fronchettl@vcu.edu
+    ! This file is not affiliated, sponsored
+    ! or approved by ABB. Always refer to their application
+    ! manual for more information.
+    
+    ! Identifier for EGM process
+    VAR egmident egm_id;
+    ! Current state of EGM process on controller
+    VAR egmstate egm_state;
+
+    ! Convergence criteria for joint rotation (in degrees)
+    CONST egm_minmax egm_minmax_joint := [-1, 1];
+    
+    ! Correction frame for path correction
+    LOCAL CONST pose egm_correction_frame := [[0, 0, 0], [1, 0, 0, 0]];
+    LOCAL CONST pose egm_sensor_frame := [[0, 0, 0], [1, 0, 0, 0]];
+    
+    ! Main function
+    PROC main()
+        EGM_JOINT_MOVEMENT;
+    ENDPROC
+    
+    ! EGM function used to move the robot axes to a specific degree.
+    ! In this approach, the external device sends a message to the robot specifying the degree
+    ! of each axis and the robot performs the necessary movements.
+    PROC EGM_JOINT_MOVEMENT()
+        ! Check if no EGM setup is active.
+        IF egm_state = EGM_STATE_DISCONNECTED THEN
+            TPWrite "EGM State: Preparing controller for EGM communication.";
+        ENDIF
+            
+        WHILE TRUE DO            
+            ! Register a new EGM id.
+            EGMGetId egm_id;
+
+            ! Get current state of egm_id.
+            egm_state := EGMGetState(egm_id);
+
+            ! Setup the EGM communication.
+            ! Make sure the external device name being used is the same specified in 
+            ! the controller communication tab. In this example, the UdpUc device name is PC,
+            ! moving the robot mechanical unit ROB_1.
+            IF egm_state <= EGM_STATE_CONNECTED THEN
+                EGMSetupUC ROB_1, egm_id, "default", "PC", \Pose; 
+            ENDIF
+            
+            ! De-serializes the message sent by the external device.
+            ! Note: There are other variables that you can manipulate with EGMActJoint,
+            ! always refer to documentation for more information.
+            EGMActJoint egm_id\Tool:=tool0,
+                        \J1:=egm_minmax_joint,
+                        \J2:=egm_minmax_joint,
+                        \J3:=egm_minmax_joint,
+                        \J4:=egm_minmax_joint,
+                        \J5:=egm_minmax_joint,
+                        \J6:=egm_minmax_joint,
+                        \LpFilter:= 16,
+                        \MaxSpeedDeviation:=1;
+
+            ! Performs a movement based on the pose target sent by the external device.
+            EGMRunJoint egm_id, EGM_STOP_HOLD \J1 \J2 \J3 \J4 \J5 \J6 \CondTime:=10\RampInTime:=0;
+
+            ! (Debugging) Checks if robot is listening for external commands.
+            IF egm_state = EGM_STATE_CONNECTED THEN
+                TPWrite "EGM State: Waiting for movement request.";
+            ENDIF
+            
+            ! (Debugging) Checks if the robot received an external command and is moving.
+            IF egm_state = EGM_STATE_RUNNING THEN
+                TPWrite "EGM State: Movement request received. Robot is moving.";
+            ENDIF
+            
+            ! Reset EGM communication.
+            IF egm_state <= EGM_STATE_CONNECTED THEN
+                EGMReset egm_id;
+            ENDIF
+        ENDWHILE
+
+        ! (Debugging) Checks if external devices are available.
+        ERROR
+        IF ERRNO = ERR_UDPUC_COMM THEN
+            TPWrite "EGM Warning: Robot is not detecting any external devices.";
+            TRYNEXT;
+        ENDIF
+    ENDPROC
+ENDMODULE
