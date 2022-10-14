@@ -106,6 +106,8 @@ namespace WPFProject
         {
             /* Parse the current robot position and EGM state from message
                 received from robot and update the related variables */
+
+            /* Checks if header is valid */
             if (message.Header.HasSeqno && message.Header.HasTm)
             {
                 x = message.FeedBack.Cartesian.Pos.X;
@@ -124,6 +126,9 @@ namespace WPFProject
 
         private void DisplayMessageOnInterface()
         {
+            /* Access UI components from main thread and update their values 
+               Dispatcher.Invoke is only necessary because this method is being executed 
+               by a secondary thread. Refer to threading documentation to learn more. */
             TranslationValues.Dispatcher.Invoke(System.Windows.Threading.DispatcherPriority.Normal, new Action(delegate ()
             {
                 TranslationValues.Text = string.Format("X = {0}, Y = {1}, Z = {2}", Convert.ToInt32(x), Convert.ToInt32(y), Convert.ToInt32(z));
