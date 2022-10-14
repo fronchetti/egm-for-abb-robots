@@ -1,6 +1,9 @@
 MODULE EGMCommunication
     ! Author: Felipe Fronchetti
     ! Email: fronchettl@vcu.edu
+    ! This file is not affiliated, sponsored
+    ! or approved by ABB. Always refer to their application
+    ! manual for more information.
     
     ! Identifier for EGM process
     VAR egmident egm_id;
