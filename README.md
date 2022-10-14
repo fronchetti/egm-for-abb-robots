@@ -16,6 +16,7 @@ For those looking for options that are not implemented in C#, please refer to li
 ## What is available in this repository?
 - [WPF Application](https://github.com/vcuse/egm-for-abb-robots/tree/main/WPF-Example): Example of a desktop application implemented in C# (.NET) to move an ABB robot to a specific location (x, y, z) and rotation (rx, ry, rz) using _EGMActPose_ and _EGMRunPose_.
 - [Tutorial on how to prepare your ABB robot controller to run EGM](https://github.com/vcuse/egm-for-abb-robots/blob/main/EGM-Preparing-your-robot.pdf)
+- Examples of RAPID code to turn your controller into an EGM client: [Robot movement based on translation and rotation values](https://github.com/vcuse/egm-for-abb-robots/blob/main/EGMPoseCommunication.modx)
 
 
 # Common questions
