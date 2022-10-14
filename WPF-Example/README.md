@@ -16,7 +16,7 @@ There are only two files in this project that you should care about if you want 
 - [Egm.cs](https://github.com/vcuse/egm-for-abb-robots/blob/main/WPF-Example/Egm.cs) This file contains the Abb.Egm library used in [MainWindow.xaml.cs](https://github.com/vcuse/egm-for-abb-robots/blob/main/WPF-Example/MainWindow.xaml.cs) to write messages in EGM format. Notice that this file is generated automatically. To create your own version of this file, refer to the EGM manual provided by ABB (Section 3.2 - Building an EGM sensor communication endpoint).
 
 ## Notes from the author
-If you plan to create your own WPF application, don't forget to install Google.Protobuf and Google.Protobuf.Tools in the NuGet Package Manager.
+If you plan to create your own WPF application, don't forget to install Google.Protobuf and Google.Protobuf.Tools in the NuGet Package Manager. ABB updates Egm.cs in almost every update, so please use this project as a reference point but don't miss the chance to implement a new version of it.
 
 ## Need help?
 Don't hesitate to contact me:
