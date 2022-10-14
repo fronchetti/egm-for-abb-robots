@@ -1,3 +1,4 @@
+# Using Unity to define joints position in ABB robots
 - Import Egm.cs to Unity project (drag and drop)
 - Install NugetForUnity to install Google.Protobuf and Google.Protobuf.Tools (required to run Egm.cs). Restart Unity once installed.
 - Make sure your firewall allows inbound messages for the Unity version you are using.
