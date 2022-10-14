@@ -18,7 +18,7 @@ For those looking for options that are not implemented in C#, please refer to li
 
 
 # Common questions
-- **Is EGM available in all ABB robots?** As far as I know, some robots using RobotWare 6 do not support EGM by default. We have a YuMi in our lab, and we had to contact ABB to get access to this feature in our IRC5 controller. My recommendation is to always contact ABB support when in doubt about something.
+- **Is EGM available in all ABB robots?** As far as I know, some robots using RobotWare 6 do not support EGM by default. We have a YuMi in our lab, and we had to contact ABB to get access to this feature in our IRC5 controller. My recommendation is to always contact ABB support when you have questions about your robot.
 
 - **Does it work with virtual controllers?**
 The answer is yes, but there are limitations. As far as I am aware of, it is not possible to run both virtual controlller and your application on a same machine. The reason is pretty simple, your computer would send and receive messages from both the EGM client and the server at the same time, creating issues in the communication process (e.g., errors on robot controller saying that the inbound message is invalid). 
