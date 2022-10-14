@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Y0AbS83fURkpUMKgiNcDzrOV+VL9XcFZ44yi7g1rtWdLx3/4ue0GgPG1nSXcKyoCfAWPK0rr6UF7BpAeRffuTw==",
+  "dgSpecHash": "OLMR3SpLm3CqdZTF5f45ddeY/qSsYqPEw1stJvICz0v/d0qKTMzGOJsM6tZRdxu8Z6DjSG014L//EHaCVXvoUA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\fronchettl\\Documents\\GitHub\\WPFProject\\WPFProject.csproj",
+  "projectFilePath": "C:\\Users\\fronchettl\\Documents\\GitHub\\egm-for-abb-robots\\WPF-Example\\WPFProject.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\fronchettl\\.nuget\\packages\\google.protobuf\\3.21.7\\google.protobuf.3.21.7.nupkg.sha512",
     "C:\\Users\\fronchettl\\.nuget\\packages\\google.protobuf.tools\\3.21.7\\google.protobuf.tools.3.21.7.nupkg.sha512",

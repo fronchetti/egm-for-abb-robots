@@ -158,11 +158,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\fronchettl\\Documents\\GitHub\\WPFProject\\WPFProject.csproj",
+      "projectUniqueName": "C:\\Users\\fronchettl\\Documents\\GitHub\\egm-for-abb-robots\\WPF-Example\\WPFProject.csproj",
       "projectName": "WPFProject",
-      "projectPath": "C:\\Users\\fronchettl\\Documents\\GitHub\\WPFProject\\WPFProject.csproj",
+      "projectPath": "C:\\Users\\fronchettl\\Documents\\GitHub\\egm-for-abb-robots\\WPF-Example\\WPFProject.csproj",
       "packagesPath": "C:\\Users\\fronchettl\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\fronchettl\\Documents\\GitHub\\WPFProject\\obj\\",
+      "outputPath": "C:\\Users\\fronchettl\\Documents\\GitHub\\egm-for-abb-robots\\WPF-Example\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
