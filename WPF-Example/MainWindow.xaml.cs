@@ -18,7 +18,6 @@ using System.Windows.Shapes;
  * Disclaimer: This code is heavily inspired on egm-sensor.cs by ABB.
  * Please always refer to the EGM manual provided by ABB for more detailed information. */
 
-
 /* EGM */
 using Abb.Egm;
 using System.IO;
@@ -161,7 +160,7 @@ namespace WPFProject
 
                 message.WriteTo(memoryStream);
 
-                /* Sent the message as a byte array over the network to the robot */
+                /* Send the message as a byte array over the network to the robot */
                 int bytesSent = server.Send(memoryStream.ToArray(), (int) memoryStream.Length, robotAddress);
 
                 if (bytesSent < 0)
