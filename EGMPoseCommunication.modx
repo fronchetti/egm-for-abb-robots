@@ -20,7 +20,7 @@ MODULE EGMCommunication
         EGM_POSE_MOVEMENT;
     ENDPROC
     
-    ! EGM function used to move the robot to a specific position using a pose target
+    ! EGM function used to move the robot to a specific position using a pose target.
     ! In this approach, the external device sends a message to the robot specifying angles and a position
     ! in the cartesian coordinate system where the robot should move to.
     PROC EGM_POSE_MOVEMENT()
