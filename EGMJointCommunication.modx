@@ -57,7 +57,7 @@ MODULE EGMCommunication
                         \J5:=egm_minmax_joint,
                         \J6:=egm_minmax_joint,
                         \LpFilter:= 16,
-                        \MaxSpeedDeviation:=1;
+                        \MaxSpeedDeviation:=100;
 
             ! Performs a movement based on the pose target sent by the external device.
             EGMRunJoint egm_id, EGM_STOP_HOLD \J1 \J2 \J3 \J4 \J5 \J6 \CondTime:=10\RampInTime:=0;
