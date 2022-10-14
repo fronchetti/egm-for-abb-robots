@@ -7,7 +7,7 @@ _Last update: 10/13/2022_
 # Requirements
 In order to run this project, you need:
 - Unity (Version 2020.3.14f1)
-- Make sure your firewall allows inbound/outbound messages from Unity
+- To allow Unity in your operating system firewall to receive and send messages 
 - An ABB robot running EGM to serve as your client
 
 How to run this application?
