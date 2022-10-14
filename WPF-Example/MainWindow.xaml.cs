@@ -128,7 +128,7 @@ namespace WPFProject
             {
                 TranslationValues.Text = string.Format("X = {0}, Y = {1}, Z = {2}", Convert.ToInt32(x), Convert.ToInt32(y), Convert.ToInt32(z));
             }
-));
+            ));
 
             RotationValues.Dispatcher.Invoke(System.Windows.Threading.DispatcherPriority.Normal, new Action(delegate ()
             {
