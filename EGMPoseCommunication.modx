@@ -60,7 +60,7 @@ MODULE EGMCommunication
                        \ry:=egm_minmax_rotation
                        \rz:=egm_minmax_rotation
                        \LpFilter:= 16
-                       \MaxSpeedDeviation:=10;                        
+                       \MaxSpeedDeviation:=100;                        
 
             ! Performs a movement based on the pose target sent by the external device.
             EGMRunPose egm_id, EGM_STOP_HOLD \x \y \z \rx \ry \rz \CondTime:=1\RampInTime:=0;
