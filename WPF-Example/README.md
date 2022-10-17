@@ -28,5 +28,4 @@ There are only two files in this project that you should care about if you want 
 If you plan to create your own WPF application, don't forget to install Google.Protobuf and Google.Protobuf.Tools in the NuGet Package Manager. ABB updates EGM in almost every RobotWare update, so please use this project as a reference but be aware that newer implementations might differ from it (for better).
 
 ## Need help?
-Don't hesitate to contact me:
-- Felipe Fronchetti - fronchettl@vcu.edu. 
+If your question is related to the information contained in this repository, feel free to [open a new issue](https://github.com/vcuse/egm-for-abb-robots/issues).
