@@ -6,7 +6,7 @@ _Last update: 10/17/2022_
 Disclaimer: This repository is not supported, sponsored or approved by ABB. Always refer to the official EGM application manual for consistent information.
 
 ### Warning 
-The organization and authors of this repository are not liable for any consequential damage or injury that any code or information available in this repository may produce to you or others. The code available in this repository should be used only for reading purposes as different robots may act different during execution. Use the code and information available here at your own risk, and always make sure you are following all the safety procedures recommended by your robot manufacturer. 
+The organization and authors of this repository are not liable for any consequential damage or injury that any code or information available in this repository may produce to you or others. The code available in this repository should be used only for reading purposes as different robots may act different during execution. Use the code and information available here at your own risk, and always make sure you are following all the safety procedures recommended by your robot manufacturer. **Robots are dangerous machines, be careful!**
 
 ## What is EGM?
 EGM is a feature available in RobotWare 6 and 7 that provides external devices the ability to interact and manipulate ABB robots through a network. In this approach, the information is encoded using Google Protocol Buffers and trasported through UDP sockets. EGM is a great option for those who need to manipulate an ABB robot from an external device.
