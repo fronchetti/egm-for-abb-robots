@@ -4,6 +4,8 @@ _Last update: 10/13/2022_
 ![Screenshot - WPF Application](https://github.com/vcuse/egm-for-abb-robots/blob/main/Images/Screenshot-WPF-Application.jpg?raw=true)
 **Image Description:** Screenshot of this WPF application running. The application contains an interface to translate and rotate a robot over its tool center point. On the background, a GoFa running EGM code is connected to the computer through the network. The GoFa is being manipulate by the WPF application.
 
+### :warning: Warning 
+The organization and authors of this repository are not liable for any consequential damage or injury that any code or information available in this repository may produce to you or others. The code available in this repository should be used only for reading purposes as different robots and settings may act different during  program execution. Use the code and information available here at your own risk, and always make sure you are following all the safety procedures recommended by your robot manufacturer. Robots can be dangerous if used inappropriately, be careful!
 
 ## Requirements
 To make this application work you will need:
