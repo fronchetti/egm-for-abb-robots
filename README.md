@@ -1,7 +1,7 @@
 # egm-for-abb-robots
 :gear: Using Externally Guided Motion (EGM) to control ABB robots in C#. 
 
-_Last update: 10/12/2022_
+_Last update: 10/17/2022_
 
 Disclaimer: This repository is not supported, sponsored or approved by ABB. Always refer to the official EGM application manual for consistent information.
 
