@@ -16,7 +16,7 @@ In order to run this project, you need:
 ## How to run this application?
 Import this project folder using Unity Hub and open the project using Unity 2020.3.14f1. Click on the play button available on the top of the Unity interface to run the program. Use the sliders to manipulate the robot joints.
 
-If your robot is not running EGM already, please refer to our [tutorial](https://github.com/vcuse/egm-for-abb-robots/blob/main/EGM-Preparing-your-robot.pdf) on how to setup your ABB robot for EGM communication.
+If your virtual controller is not running EGM already, please refer to our [tutorial](https://github.com/vcuse/egm-for-abb-robots/blob/main/EGM-Preparing-your-robot.pdf) on how to setup your ABB robot for EGM communication.
 
 ## What files in this project are related to EGM?
 If you are here just to check how we implemented EGM code that runs in Unity, the [Scripts](https://github.com/vcuse/egm-for-abb-robots/tree/main/Unity-Example/Assets/Scripts) folder is what you need. Inside of it you will find:
