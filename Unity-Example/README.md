@@ -29,5 +29,4 @@ If you plan to create your own Unity application, don't forget to import Egm.cs 
 Keep in mind that ABB updates EGM in almost every RobotWare version, so please use this project as a reference but be aware that newer implementations might differ from it (for better).
 
 ## Need help?
-Don't hesitate to contact me:
-- Felipe Fronchetti - fronchettl@vcu.edu. 
+If your question is related to the information contained in this repository, feel free to [open a new issue](https://github.com/vcuse/egm-for-abb-robots/issues).
