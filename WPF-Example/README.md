@@ -12,7 +12,7 @@ To make this application work you will need:
 - Visual Studio
 - .NET Core 3.1
 - Windows acting as your operating system
-- An ABB robot running EGM to serve as your EGM client
+- An ABB robot controller running EGM to serve as your EGM client
 
 ## How to run this application?
 Open this project using Visual Studio by clicking on the [WPFProject.sln](https://github.com/vcuse/egm-for-abb-robots/blob/main/WPF-Example/WPFProject.sln) executable. Click on the play button on Visual Studio to execute the project. A desktop application will be opened on your computer. Use the directional buttons to control the robot.
