@@ -1,4 +1,4 @@
-Using Unity to define joints position in ABB robots
+**Using Unity to define joints position in ABB robots
 Last update: 10/14/2022
 
 Screenshot - Unity Application Image Description: Screenshot of this application running on Unity. The application contains an interface to manipulate the robot axes using sliders. At the bottom a text component shows the current state of the EGM process.
@@ -29,3 +29,4 @@ Keep in mind that ABB updates EGM in almost every RobotWare version, so please u
 
 Need help?
 If your question is related to the information contained in this repository, feel free to open a new issue.
+**
