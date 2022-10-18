@@ -10,7 +10,6 @@ The organization and authors of this repository are not liable for any consequen
 ## Requirements
 In order to run this project, you need:
 - Unity (Version 2020.3.14f1)
-- To allow Unity in your operating system firewall to receive and send messages 
 - An ABB robot controller running EGM to serve as your EGM client
 
 ## How to run this application?
@@ -26,7 +25,7 @@ If you are here just to check how we implemented EGM code that runs in Unity, th
 ## Notes from the author
 If you plan to create your own Unity application, don't forget to import Egm.cs to your project and install Google.Protobuf and Google.Protobuf.Tools **in your Unity project** (this is a requirement for Egm.cs). Don't use the NuGet Manager of Visual Studio for this type of application as it will not install it correctly inside the Unity project. I recommend [NuGetForUnity](https://github.com/GlitchEnzo/NuGetForUnity) as the alternative to install both libraries. 
 
-Keep in mind that ABB updates EGM in almost every RobotWare version, so please use this project as a reference but be aware that newer implementations might differ from it (for better).
+Please don't forget to allow Unity to receive and submit messages over the network in your firewall. Keep in mind that ABB updates EGM in almost every RobotWare version, so please use this project as a reference but be aware that newer implementations might differ from it (for better).
 
 ## Need help?
 If your question is related to the information contained in this repository, feel free to [open a new issue](https://github.com/vcuse/egm-for-abb-robots/issues).
