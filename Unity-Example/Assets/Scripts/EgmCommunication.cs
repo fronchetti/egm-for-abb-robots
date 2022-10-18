@@ -47,23 +47,20 @@ public class EgmCommunication : MonoBehaviour
         /* Initializes EGM connection with robot */
         CreateConnection();
 
-        /* Collects messages from robot in a secondary thread */
-        worker = new BackgroundWorker();
-        worker.DoWork += new DoWorkEventHandler(CollectRobotMessages);
-        worker.WorkerSupportsCancellation = true;
-        worker.RunWorkerAsync();
-
         j1Slider.onValueChanged.AddListener(delegate { SendJointsMessageToRobot(j1Slider.value, j2, j3, j4, j5, j6); });
         j2Slider.onValueChanged.AddListener(delegate { SendJointsMessageToRobot(j1, j2Slider.value, j3, j4, j5, j6); });
         j3Slider.onValueChanged.AddListener(delegate { SendJointsMessageToRobot(j1, j2, j3Slider.value, j4, j5, j6); });
         j4Slider.onValueChanged.AddListener(delegate { SendJointsMessageToRobot(j1, j2, j3, j4Slider.value, j5, j6); });
         j5Slider.onValueChanged.AddListener(delegate { SendJointsMessageToRobot(j1, j2, j3, j4, j5Slider.value, j6); });
         j6Slider.onValueChanged.AddListener(delegate { SendJointsMessageToRobot(j1, j2, j3, j4, j5, j6Slider.value); });
+
+        UpdateSlidersWithJointValues();
     }
 
     /* (Unity) Update is called once per frame */
     void Update()
     {
+        Debug.Log(string.Format("Joint 1: {0}, Slider 1: {1}", j1, j1Slider.value));
         egmStateText.text = "EGM State: " + egmState;
     }
 
@@ -79,24 +76,25 @@ public class EgmCommunication : MonoBehaviour
         robotAddress = new IPEndPoint(IPAddress.Any, port);
     }
 
-    private void CollectRobotMessages(object sender, DoWorkEventArgs e)
+    private void UpdateSlidersWithJointValues()
     {
-        BackgroundWorker worker = (BackgroundWorker) sender;
+        /* Receives the messages sent by the robot in as a byte array */
+        var bytes = server.Receive(ref robotAddress);
 
-        while (!worker.CancellationPending)
+        if (bytes != null)
         {
-            /* Receives the messages sent by the robot in as a byte array */
-            var bytes = server.Receive(ref robotAddress);
+            /* De-serializes the byte array using the EGM protocol */
+            EgmRobot message = EgmRobot.Parser.ParseFrom(bytes);
 
-            if (bytes != null)
-            {
-                /* De-serializes the byte array using the EGM protocol */
-                EgmRobot message = EgmRobot.Parser.ParseFrom(bytes);
-
-                ParseJointValuesFromMessage(message);
-                UpdateSlidersWithJointValues();
-            }
+            ParseJointValuesFromMessage(message);
         }
+
+        j1Slider.value = (float)j1;
+        j2Slider.value = (float)j2;
+        j3Slider.value = (float)j3;
+        j4Slider.value = (float)j4;
+        j5Slider.value = (float)j5;
+        j6Slider.value = (float)j6;
     }
 
     private void ParseJointValuesFromMessage(EgmRobot message)
@@ -119,16 +117,6 @@ public class EgmCommunication : MonoBehaviour
         {
             Debug.Log("The message received from robot is invalid.");
         }
-    }
-
-    private void UpdateSlidersWithJointValues()
-    {
-        j1Slider.value = (float) j1;
-        j2Slider.value = (float) j2;
-        j3Slider.value = (float) j3;
-        j4Slider.value = (float) j4;
-        j5Slider.value = (float) j5;
-        j6Slider.value = (float) j6;
     }
 
     private void SendJointsMessageToRobot(double j1, double j2, double j3, double j4, double j5, double j6)
