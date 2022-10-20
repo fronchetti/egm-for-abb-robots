@@ -20,12 +20,12 @@ For those looking for options that are not implemented in C#, please refer to li
 
 ## What is available in this repository?
 - [Tutorial on how to prepare your ABB robot controller to run EGM](https://github.com/vcuse/egm-for-abb-robots/blob/main/EGM-Preparing-your-robot.pdf)
-- [WPF Application](https://github.com/vcuse/egm-for-abb-robots/tree/main/WPF-Example): Example of a desktop application implemented in C# (.NET) to move an ABB robot to a specific location (x, y, z) and rotation (rx, ry, rz) using _EGMActPose_ and _EGMRunPose_.
-- [Unity Application](https://github.com/vcuse/egm-for-abb-robots/tree/main/Unity-Example): Example of an Unity application implemented in C# to move an ABB robot to a specific joint configuration using _EGMActJoint_ and _EGMRunJoint_.
+- [WPF Application](https://github.com/vcuse/egm-for-abb-robots/tree/main/WPF-Example): Example of a desktop application implemented on Windows Presentation Foundation (WPF) to manipulate an ABB robot to a specific location and orientation using _EGMActPose_ and _EGMRunPose_. In this example, the [UdpClient](https://learn.microsoft.com/en-us/dotnet/api/system.net.sockets.udpclient) class is used for network communication.
+- [UWP Application (Hololens)](https://github.com/vcuse/egm-for-abb-robots/tree/main/Unity-Example): Example of a desktop application implemented on Universal Windows Platform (UWP) to manipulate an ABB robot to a specific location and orientation using _EGMActPose_ and _EGMRunPose_. In this example, the [DatagramSocket](https://learn.microsoft.com/en-us/uwp/api/windows.networking.sockets.datagramsocket/) class is used for network communication. This is a great example for those aiming to use EGM with Microsoft Hololens as this mixed reality device runs under UWP (and UdpClient doesn't work with Hololens at the moment).
+- [Unity Application](https://github.com/vcuse/egm-for-abb-robots/tree/main/Unity-Example): Example of an Unity application implemented in C# to move an ABB robot to a specific joint configuration using _EGMActJoint_ and _EGMRunJoint_. In this example, the [UdpClient](https://learn.microsoft.com/en-us/dotnet/api/system.net.sockets.udpclient) class is used for network communication.
 - Examples of RAPID code to turn your controller into an EGM client: 
     - [Robot movement based on _EGMActPose_ and _EGMRunPose_](https://github.com/vcuse/egm-for-abb-robots/blob/main/EGMPoseCommunication.modx) (Position)
     - [Robot movement based on _EGMActJoint_ and _EGMRunJoint_](https://github.com/vcuse/egm-for-abb-robots/blob/main/EGMJointCommunication.modx) (Joint Values)
-
 
 ## Common questions
 - **Is EGM available in all ABB robots?** As far as I know, some robots using RobotWare 6 do not support EGM by default. We have a YuMi in our lab, and we had to contact ABB to get access to this feature in our IRC5 controller. My recommendation is to always contact ABB support when you have questions about your robot.
