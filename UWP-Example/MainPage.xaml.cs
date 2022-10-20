@@ -22,13 +22,14 @@ using Google.Protobuf;
 using Windows.Networking;
 using Windows.Networking.Sockets;
 using Windows.Storage.Streams;
+using Windows.UI.Core;
 
 namespace UWP_Example
 {
     /// <summary>
-    /// An example of EGM communicatio using Universal Windows Platform.
-    /// UWP is the base of Hololens 2. If you plan to use EGM with Hololens,
-    /// you can use this code as reference.
+    /// An example of EGM communication using Universal Windows Platform (UWP).
+    /// UWP is the fundamental platform of Hololens 2. If you plan to use EGM with Hololens,
+    /// you can use this code as a reference.
     /// </summary>
     public sealed partial class MainPage : Page
     {
@@ -50,16 +51,26 @@ namespace UWP_Example
         public MainPage()
         {
             InitializeComponent();
-            CreateConnectionAsync();
+            CreateSocket();
         }
 
-        private void CreateConnectionAsync()
+        private void CreateSocket()
         {
             socket = new DatagramSocket();
-            socket.MessageReceived += RobotSentMessage; /* Listens to messages from robot */
+            socket.MessageReceived += CollectRobotMessage; /* Listens to messages from robot */
+            StartConnection();
         }
 
-        private void RobotSentMessage(DatagramSocket sender, DatagramSocketMessageReceivedEventArgs args)
+        private async void StartConnection()
+        {
+            /* We must specify which remote address we will listen to in order to receive messages. 
+               Read more about how DatagramSocket works at:
+               https://learn.microsoft.com/en-us/uwp/api/windows.networking.sockets.datagramsocket.connectasync*/
+
+            await socket.ConnectAsync(new EndpointPair(null, port, robotAddress, port));
+        }
+
+        private void CollectRobotMessage(DatagramSocket sender, DatagramSocketMessageReceivedEventArgs args)
         {
             Console.WriteLine("Message received.");
             DataReader reader = args.GetDataReader();
@@ -74,6 +85,7 @@ namespace UWP_Example
                 EgmRobot message = EgmRobot.Parser.ParseFrom(bytes);
 
                 ParseCurrentPositionFromMessage(message);
+                _ = DisplayMessageOnInterfaceAsync();
             }
         }
 
@@ -97,6 +109,19 @@ namespace UWP_Example
             }
         }
 
+        private async Task DisplayMessageOnInterfaceAsync()
+        {
+            /* Access UI components from main thread and update their values 
+               Dispatcher.RunAsync is only necessary because this method is being executed 
+               by a secondary thread. Refer to Event Handling documentation to learn more. */
+            await Dispatcher.RunAsync(CoreDispatcherPriority.Normal, () =>
+            {
+                TranslationValues.Text = string.Format("X = {0}, Y = {1}, Z = {2}", Convert.ToInt32(x), Convert.ToInt32(y), Convert.ToInt32(z));
+                RotationValues.Text = string.Format("X = {0}, Y = {1}, Z = {2}", Convert.ToInt32(rx), Convert.ToInt32(ry), Convert.ToInt32(rz));
+                EGMState.Text = string.Format("EGM State: {0}", egmState);
+            });
+        }
+
         private async Task SendPoseMessageToRobotAsync(double x, double y, double z, double rx, double ry, double rz)
         {
             /* Send message containing new positions to robot in EGM format.
@@ -115,9 +140,9 @@ namespace UWP_Example
                 message.WriteTo(memoryStream);
 
                 /* Sends the message asynchronously as a byte array over the network to the robot */
-                using (IOutputStream asyncCommunication = await socket.GetOutputStreamAsync(robotAddress, port))
+                using (IOutputStream robotOutputStream = await socket.GetOutputStreamAsync(robotAddress, port))
                 {
-                    using (DataWriter writer = new DataWriter(asyncCommunication))
+                    using (DataWriter writer = new DataWriter(robotOutputStream))
                     {
                         writer.WriteBytes(memoryStream.ToArray());
                         await writer.StoreAsync();
