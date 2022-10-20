@@ -13,6 +13,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using System.Threading.Tasks;
+using Windows.UI.Core;
 
 /* EGM */
 using Abb.Egm;
@@ -22,7 +23,6 @@ using Google.Protobuf;
 using Windows.Networking;
 using Windows.Networking.Sockets;
 using Windows.Storage.Streams;
-using Windows.UI.Core;
 
 namespace UWP_Example
 {
@@ -72,7 +72,6 @@ namespace UWP_Example
 
         private void CollectRobotMessage(DatagramSocket sender, DatagramSocketMessageReceivedEventArgs args)
         {
-            Console.WriteLine("Message received.");
             DataReader reader = args.GetDataReader();
             byte[] bytes = new byte[reader.UnconsumedBufferLength];
             reader.ReadBytes(bytes);
