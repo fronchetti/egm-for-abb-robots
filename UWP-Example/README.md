@@ -1,5 +1,5 @@
-#  Using Windows Presentation Foundation (WPF) to control ABB robots
-_Last update: 10/13/2022_
+#  Using Universal Windows Platform (UWP) to control ABB robots
+_Last update: 10/23/2022_
 
 ![Screenshot - WPF Application](https://github.com/vcuse/egm-for-abb-robots/blob/main/Images/Screenshot-WPF-Application.jpg?raw=true)
 **Image Description:** Screenshot of this UWP application running. The application contains an interface to translate and rotate a robot over its tool center point. On the background, a GoFa running EGM code is connected to the computer through the network. The GoFa is being manipulate by the UWP application.
