@@ -21,7 +21,7 @@ If your virtual controller is not running EGM already, please refer to our [tuto
 
 ## What files in this project are related to EGM?
 There are only two files in this project that you should care about if you want to learn more about EGM:
-- [MainWindow.xaml.cs](https://github.com/vcuse/egm-for-abb-robots/blob/main/UWP-Example/MainPage.xaml.cs) This desktop application has only one graphical interface, and is in the C# file associated with this interface (MainWindow.xaml) that we run the EGM communication between our computer and the ABB robot. This is the most important file as it contains the entire implementation made for this project. Notice that different from the WPF application, this one uses DatagramSocket to implement the UDP communication.
+- [MainWindow.xaml.cs](https://github.com/vcuse/egm-for-abb-robots/blob/main/UWP-Example/MainPage.xaml.cs) This desktop application has only one graphical interface, and is in the C# file associated with this interface (MainWindow.xaml) that we run the EGM communication between our computer and the ABB robot. This is the most important file as it contains the entire implementation made for this project. Notice that different from the WPF application, this one uses DatagramSockets to implement the UDP communication.
 - [Egm.cs](https://github.com/vcuse/egm-for-abb-robots/blob/main/UWP-Example/Egm.cs) This file contains the Abb.Egm library used in [MainWindow.xaml.cs](https://github.com/vcuse/egm-for-abb-robots/blob/main/UWP-Example/MainPage.xaml.cs) to write messages in EGM format. Notice that this file is generated automatically. To create your own version of this file, refer to the EGM manual provided by ABB (Section 3.2 - Building an EGM sensor communication endpoint).
 
 ## Notes from the author
