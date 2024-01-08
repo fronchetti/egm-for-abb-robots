@@ -39,6 +39,7 @@ The answer is yes, but there are limitations. As far as I am aware, it is not po
 Yes, you can. However, the information provided is way more limited than what you can get using the ABB PC SDK. To get general information from the robot using EGM, inspect the message header sent from the robot to the external device using the Egm.cs library provided by ABB. You can also refer to their manual for a better understanding of what kind of information they provide through EGM.
 
 - **I did everything right, but my application is not communicating with the robot!**
+
 To help developers with this issue, here is a checklist:
 - [ ] First of all, make sure your ABB robot is compatible (and enabled) with externally guided motion. You can do that by connecting your robot controller to your computer, and checking if EGM is available and enabled in its RobotWare installation.
 - [ ] Make sure you registered a UDP Unicast Device for your external device (e.g., HoloLens) in your robot controller system. You can also do that by connecting your robot to your computer and registering the device in the Configuration > Communication tab. Right-click to register a new device (writing access is necessary). This option will only be available if EGM is enabled on your controller.
